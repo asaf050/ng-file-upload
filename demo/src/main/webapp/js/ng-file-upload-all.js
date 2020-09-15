@@ -1193,7 +1193,7 @@ ngFileUpload.directive('ngfSelect', ['$parse', '$timeout', '$compile', 'Upload',
 
       for (var i = 0; i < elem[0].attributes.length; i++) {
         var attribute = elem[0].attributes[i];
-        if (attribute.name !== 'type' && attribute.name !== 'class' && attribute.name !== 'style') {
+        if (attribute.name !== 'type' && attribute.name !== 'class' && attribute.name !== 'style' && attribute.name !== 'data-wml-speech-command') {
           if (attribute.name === 'id') {
             updateId(attribute.value);
             unwatches.push(attr.$observe('id', updateId));
