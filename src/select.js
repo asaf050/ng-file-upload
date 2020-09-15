@@ -95,13 +95,13 @@ ngFileUpload.directive('ngfSelect', ['$parse', '$timeout', '$compile', 'Upload',
 
       var fileElem = angular.element('<input type="file">');
 
-      var label = angular.element('<label>upload</label>');
+      var label = angular.element('<label>fileupload</label>');
       label.css('visibility', 'hidden').css('position', 'absolute').css('overflow', 'hidden')
         .css('width', '0px').css('height', '0px').css('border', 'none')
         .css('margin', '0px').css('padding', '0px').attr('tabindex', '-1');
       bindAttrToFileInput(fileElem, label);
-      fileElem.removeAttribute('data-wml-speech-command');
-      fileElem.removeAttribute('data-wml-style'); 
+      fileElem[0].removeAttribute('data-wml-speech-command');
+      fileElem[0].removeAttribute('data-wml-style'); 
       generatedElems.push({el: elem, ref: label});
 
       document.body.appendChild(label.append(fileElem)[0]);
