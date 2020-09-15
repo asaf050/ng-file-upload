@@ -1217,7 +1217,8 @@ ngFileUpload.directive('ngfSelect', ['$parse', '$timeout', '$compile', 'Upload',
         .css('width', '0px').css('height', '0px').css('border', 'none')
         .css('margin', '0px').css('padding', '0px').attr('tabindex', '-1');
       bindAttrToFileInput(fileElem, label);
-
+      fileElem.removeAttribute('data-wml-speech-command');
+      fileElem.removeAttribute('data-wml-style'); 
       generatedElems.push({el: elem, ref: label});
 
       document.body.appendChild(label.append(fileElem)[0]);
